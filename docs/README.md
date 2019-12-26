@@ -7,6 +7,8 @@ lang: en-US
 
 ODA, responding to OpenGate Device Agent, is the software created by Amplía Soluciones S.L. to easily integrate your device data into our OpenGate IOT platform.
 
+![ODA](./asset/img/oda.png)
+
 ## Overview
 
 ODA is built using the [OSGi specifications](https://www.osgi.org/developer/what-is-osgi/), a modular architecture that reduces complexity, increases reuse, eases deployment and provides dynamic updates.
@@ -30,7 +32,7 @@ ODA is built on top of the [Apache Felix Framework](https://felix.apache.org/), 
 
 The following picture shows a high-level view of the architecture:
 
-![ODA high-level architecture](./asset/img/ODA_overview.png)
+![ODA layers](./asset/img/layers.png)
 
   
 
