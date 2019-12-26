@@ -1,3 +1,8 @@
+---
+title: ODA official documentation
+lang: en-US
+---
+
 # ODA
 
 ODA, responding to OpenGate Device Agent, is the software created by Amplía Soluciones S.L. to easily integrate your device data into our OpenGate IOT platform.
