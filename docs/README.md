@@ -25,7 +25,7 @@ ODA is built on top of the [Apache Felix Framework](https://felix.apache.org/), 
 
 The following picture shows a high-level view of the architecture:
 
-![ODA high-level architecture](images/ODA_overview.png "ODA Architecture Overview")
+![ODA high-level architecture](./asset/img/ODA_overview.png)
 
   
 
