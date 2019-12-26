@@ -1,0 +1,14 @@
+{
+  "name": "oda-docs",
+  "version": "1.0.0",
+  "description": "ODA documentation",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "author": "Amplía Soluciones S.L.",
+  "license": "Apache License 2.0",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  }
+}
