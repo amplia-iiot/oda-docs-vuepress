@@ -7,8 +7,16 @@
     "docs:build": "vuepress build docs"
   },
   "author": "Amplía Soluciones S.L.",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "dependencies": {
     "vuepress": "^1.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amplia-iiot/oda-docs-vuepress.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amplia-iiot/oda-docs-vuepress/issues"
+  },
+  "homepage": "https://github.com/amplia-iiot/oda-docs-vuepress#readme"
 }
