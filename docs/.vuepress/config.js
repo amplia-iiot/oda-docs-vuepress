@@ -14,54 +14,85 @@ module.exports = {
 		sidebar: [{
 				title: 'ODA',
 				path: '/',
-				collapsable: false,
 				sidebarDepth: 1
 			},
 			{
+				title: 'Infrastructure',
+				path: '/infrastructure/',
+				sidebarDepth: 1,
+				children: [{
+						title: 'Core',
+						path: '/infrastructure/core.md',
+						sidebarDepth: 2
+					},
+					{
+						title: 'Comms',
+						path: '/infrastructure/comms.md',
+						sidebarDepth: 2
+					},
+					{
+						title: 'Services',
+						path: '/infrastructure/services.md',
+						sidebarDepth: 2
+					},
+					{
+						title: 'Subsystems',
+						path: '/infrastructure/subsystems.md',
+						sidebarDepth: 2
+					}
+				]
+			},
+			{
 				title: 'Layers',
-				collapsable: false,
+				path: '/layers/',
 				sidebarDepth: 1,
 				children: [{
 						title: 'Connectors',
-						path: '/connectors.md',
+						path: '/layers/connectors.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Operation Dispatcher',
-						path: '/operationDispatcher.md',
+						path: '/layers/operationDispatcher.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Event Dispatcher',
-						path: '/eventDispatcher.md',
+						path: '/layers/eventDispatcher.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Operations',
-						path: '/operations.md',
+						path: '/layers/operations.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'State Manager',
-						path: '/stateManager.md',
+						path: '/layers/stateManager.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Rule Engine',
-						path: '/ruleEngine.md',
+						path: '/layers/ruleEngine.md',
 						sidebarDepth: 2
 					},
 					{
-						title: 'Datastraems',
-						path: '/datastreams.md',
+						title: 'Datastreams',
+						path: '/layers/datastreams.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Hardware',
-						path: '/hardware.md',
+						path: '/layers/hardware.md',
 						sidebarDepth: 2
-					},
+					}
 				]
+			},
+			{
+				title: 'Guides',
+				path: '/guides/',
+				sidebarDepth: 1,
+				children:[]
 			}
 		]
 	}

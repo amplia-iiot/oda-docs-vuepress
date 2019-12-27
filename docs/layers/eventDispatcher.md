@@ -2,13 +2,13 @@
 
 The event dispatcher is responsible for receiving the events generated in the device and sending them through the available connectors.  
 
-The interface defining the service is the [EventDispatcher](https://github.com/amplia-iiot/oda/tree/master/oda-events/api/src/main/java/es/amplia/oda/event/api/EventDispatcher.java) interface and the main method is the __publish__ method that receives an event:
+The interface defining the service is the [EventDispatcher](https://github.com/amplia-iiot/oda/blob/master/oda-events/api/src/main/java/es/amplia/oda/event/api/EventDispatcher.java) interface and the main method is the __publish__ method that receives an event:
 ```java
 public interface EventDispatcher {
     void publish(Event event);
 }
 ``` 
-The [Event](https://github.com/amplia-iiot/oda/tree/master/oda-events/api/src/main/java/es/amplia/oda/event/api/Event.java) is defined as:
+The [Event](https://github.com/amplia-iiot/oda/blob/master/oda-events/api/src/main/java/es/amplia/oda/event/api/Event.java) is defined as:
 ```java
 public class Event {
     private String datastreamId;
@@ -21,7 +21,7 @@ public class Event {
 
 #### OpenGate Event Dispatcher
 
-The [OpenGate Event Dispatcher](https://github.com/amplia-iiot/oda/tree/master/oda-dispatchers/opengate/src/main/java/es/amplia/oda/dispatcher/opengate/event/EventDispatcherImpl.java) publishes the received events through an OpenGate connector with the [OpenGate IOT JSON](http://jekyll.amplia.es/OpenGateDoc/LATEST/opengate-doc-api/api-south/opengate-api-south.html#collect_history) format.
+The [OpenGate Event Dispatcher](https://github.com/amplia-iiot/oda/blob/master/oda-dispatchers/opengate/src/main/java/es/amplia/oda/dispatcher/opengate/event/EventDispatcherImpl.java) publishes the received events through an OpenGate connector with the [OpenGate IOT JSON](http://jekyll.amplia.es/OpenGateDoc/LATEST/opengate-doc-api/api-south/opengate-api-south.html#collect_history) format.
 
 The __publish__ method use the proper serializer to serialize the received event to the configured content-type and send it to the active OpenGate Connector.
 
@@ -31,7 +31,7 @@ The Event Dispatcher can be configured with the following global properties:
 * __reducedOutput__: Use a reduced IOT format, removing all optional fields, to decrease the bandwidth consumed. The default value is _false_
 * __eventContentType__: Content-type of the published events. The default content-type format is _JSON_.
 
-Using a decorator pattern, the [Event Collector](https://github.com/amplia-iiot/oda/tree/master/oda-dispatchers/opengate/src/main/java/es/amplia/oda/dispatcher/opengate/event/EventCollectorImpl.java) allows to store the events of some configured datastreams to send multiple datapoints in the same message at a configured period of time. Each datastream is configured in a line in the configuration file with the following format:
+Using a decorator pattern, the [Event Collector](https://github.com/amplia-iiot/oda/blob/master/oda-dispatchers/opengate/src/main/java/es/amplia/oda/dispatcher/opengate/event/EventCollectorImpl.java) allows to store the events of some configured datastreams to send multiple datapoints in the same message at a configured period of time. Each datastream is configured in a line in the configuration file with the following format:
 ```
 datastreamId;deviceId=initialDelay;period
 ```

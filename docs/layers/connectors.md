@@ -15,7 +15,7 @@ The following protocols are implemented in ODA:
 * __MQTT__: Send IoT data and receive operations.
 * __CoAP__: Send IoT data and receive operations
 
-To add new protocols you have to implement the [OpenGateConnector](https://github.com/amplia-iiot/oda/tree/master/oda-core/commons/src/main/java/es/amplia/oda/core/commons/interfaces/OpenGateConnector.java) interface:
+To add new protocols you have to implement the [OpenGateConnector](https://github.com/amplia-iiot/oda/blob/master/oda-core/commons/src/main/java/es/amplia/oda/core/commons/interfaces/OpenGateConnector.java) interface:
 ```java
 public interface OpenGateConnector {
     void uplink(byte[] payload, ContentType contentType);
@@ -34,7 +34,7 @@ There are two available protocols:
 * __IEC 104__
 * __DNP3__
 
-To implement a new protocol the [ScadaConnector](https://github.com/amplia-iiot/oda/tree/master/oda-core/commons/src/main/java/es/amplia/oda/core/commons/interfaces/ScadaConnector.java) should be implemented:
+To implement a new protocol the [ScadaConnector](https://github.com/amplia-iiot/oda/blob/master/oda-core/commons/src/main/java/es/amplia/oda/core/commons/interfaces/ScadaConnector.java) should be implemented:
 ```java
 public interface ScadaConnector {
     void uplink(int index, T value, S type, long timestamp);
