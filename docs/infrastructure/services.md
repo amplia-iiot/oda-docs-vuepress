@@ -21,5 +21,5 @@ Currently, two serialization implementations are provided:
 * CBOR
 
 ::: tip
-To add a new serialization format, just implement the Serializer interface and register the service in the OSGi registry
+To add a new serialization format, just implement the Serializer interface contained in core module and register the service in the OSGi registry
 :::

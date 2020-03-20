@@ -25,6 +25,12 @@ The [OpenGate Event Dispatcher](https://github.com/amplia-iiot/oda/blob/master/o
 
 The __publish__ method use the proper serializer to serialize the received event to the configured content-type and send it to the active OpenGate Connector.
 
+##### Dependencies
+
+* __[Serializers](../../infrastructure/services.md#Serialization)__: Any needed implementation of Serializer Service that the dispatcher will need to de/serialize the payloads.
+* __[Device Info Provider](../datastreams/deviceinfo.md)__: Needed to know the Device Id of the device that are running the Agent and the API Key to access to OpenGate.
+* __[OpenGate Connector](../connectors/README.md#OpenGate Connectors)__: Needed to send data and respond to requests of OpenGate. 
+
 ##### Configuration
 
 The Event Dispatcher can be configured with the following global properties:

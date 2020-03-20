@@ -48,8 +48,38 @@ module.exports = {
 				sidebarDepth: 1,
 				children: [{
 						title: 'Connectors',
-						path: '/layers/connectors.md',
-						sidebarDepth: 2
+						path: '/layers/connectors/README.md',
+						sidebarDepth: 2,
+						children: [{
+						    title: 'CoAP',
+                            path: '/layers/connectors/coap.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'DNP3',
+                            path: '/layers/connectors/dnp3.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'HTTP',
+                            path: '/layers/connectors/http.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'iec104',
+                            path: '/layers/connectors/iec104.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'mqtt',
+                            path: '/layers/connectors/mqtt.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'websocket',
+                            path: '/layers/connectors/websocket.md',
+                            sidebarDepth: 3
+						}]
 					},
 					{
 						title: 'Operation Dispatcher',
@@ -58,7 +88,7 @@ module.exports = {
 					},
 					{
 						title: 'Event Dispatcher',
-						path: '/layers/eventDispatcher.md',
+						path: '/layers/eventDispatcher/README.md',
 						sidebarDepth: 2
 					},
 					{
@@ -78,8 +108,43 @@ module.exports = {
 					},
 					{
 						title: 'Datastreams',
-						path: '/layers/datastreams.md',
-						sidebarDepth: 2
+						path: '/layers/datastreams/README.md',
+						sidebarDepth: 2,
+						children: [{
+						    title: 'ADC',
+                            path: '/layers/datastreams/adc.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'Device Info',
+                            path: '/layers/datastreams/deviceinfo.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'GPIO',
+                            path: '/layers/datastreams/gpio.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'I2C',
+                            path: '/layers/datastreams/i2c.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'ModBus',
+                            path: '/layers/datastreams/modbus.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'MQTT',
+                            path: '/layers/datastreams/mqtt.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'Simulator',
+                            path: '/layers/datastreams/simulator.md',
+                            sidebarDepth: 3
+						}
 					},
 					{
 						title: 'Hardware',
