@@ -42,7 +42,7 @@ ODA follows a multi-tier architecture with the next layers:
 * [__State Manager__](layers/stateManager.md): Stores the device data state in the current moment. May have historical information. Uses the rule engine if available to trigger custom business rules each time the data is updated.
 * [__Rule Engine__](layers/ruleEngine.md): Triggers custom business logic rules over the device data.
 * [__Datastream Getters, Setters and Events__](layers/datastreams/README.md): Abstracts the data sources to ease the access to read and write data from the upper layers. Data sources may be GPIO, ADC, other devices connected through LAN protocols...
-* [__Hardware__](layers/hardware.md): Abstracts the hardware specifics.
+* [__Hardware__](layers/hardware/README.md): Abstracts the hardware specifics.
 
 ![ODA layers](./asset/img/layers.png)
 

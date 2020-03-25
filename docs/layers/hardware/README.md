@@ -10,7 +10,7 @@ Anytime you need to access a specific hardware, abstract the access and actions 
 
 Below are the hardware abstractions currently implemented
 
-##### AT Server
+##### [AT Server](atserver.md)
 
 Server capable of sending and receiving AT Commands.
 
@@ -27,7 +27,7 @@ public interface ATManager {
 }
 ```
 
-##### Comms module
+##### [Comms module](comms.md)
 
 Module capable of registering to Internet using a PIN, APN, username and password.
 ```java
@@ -36,9 +36,9 @@ public interface CommsManager {
 }
 ```
 
-##### ADC Service
+##### [ADC Service](diozero.md)
 
-Abstraction of the Analog Digital Converter pins of the device.
+Abstraction of the [Analog Digital Converter](diozero.md) pins of the device.
 ```java
 public interface AdcService {
     AdcChannel getChannelByName(String channelName);
@@ -62,9 +62,9 @@ public interface AdcChannel {
 }
 ```
 
-##### I2C
+##### [I2C](i2c.md)
 
-I2C protocol abstraction to access I2C devices (sensors, microcontrollers, ...).
+[I2C](i2c.md) protocol abstraction to access [I2C](i2c.md) devices (sensors, microcontrollers, ...).
 ```java
 public interface I2CService {
 	I2CDevice getI2CFromAddress(int controller, int address);
@@ -74,7 +74,7 @@ public interface I2CService {
 }
 ```
 
-The I2C device is defined as follows:
+The [I2C](i2c.md) device is defined as follows:
 ```java
 public interface I2CDevice {
 	int getAddress();
@@ -91,7 +91,7 @@ public interface I2CDevice {
 }
 ```
 
-##### GPIO
+##### [GPIO](jdkdio.md)
 
 Access to device input/output digital pins
 ```java
@@ -104,7 +104,7 @@ public interface GpioService {
 }
 ```
 
-The GPIO pin interface is:
+The [GPIO](jdkdio.md) pin interface is:
 ```java
 public interface GpioPin {
     int getIndex();
@@ -123,9 +123,9 @@ public interface GpioPin {
     void removeGpioPinListener();
 }
 ```
-##### Modbus
+##### [Modbus](modbus.md)
 
-The Modbus module abstracts the communication with Modbus devices through a Modbus Master.
+The [Modbus](modbus.md) module abstracts the communication with [Modbus](modbus.md) devices through a [Modbus](modbus.md) Master.
 ```java
 public interface ModbusMaster {
     void connect();

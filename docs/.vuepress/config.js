@@ -144,12 +144,42 @@ module.exports = {
 						    title: 'Simulator',
                             path: '/layers/datastreams/simulator.md',
                             sidebarDepth: 3
-						}
+						}]
 					},
 					{
 						title: 'Hardware',
-						path: '/layers/hardware.md',
-						sidebarDepth: 2
+						path: '/layers/hardware/README.md',
+						sidebarDepth: 2,
+						children: [{
+						    title: 'AT Server',
+                            path: '/layers/hardware/atserver.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'GSM Comms',
+                            path: '/layers/hardware/comms.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'ADC',
+                            path: '/layers/hardware/diozero.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'I2C',
+                            path: '/layers/hardware/i2c.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'JDK DIO',
+                            path: '/layers/hardware/jdkdio.md',
+                            sidebarDepth: 3
+						},
+						{
+						    title: 'ModBus',
+                            path: '/layers/hardware/modbus.md',
+                            sidebarDepth: 3
+						}]
 					}
 				]
 			},

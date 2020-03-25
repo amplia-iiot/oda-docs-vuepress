@@ -9,6 +9,6 @@ ODA is composed of the following layers:
 * [__State Manager__](stateManager.md): Stores the device data state in the current moment.
 * [__Rule Engine__](ruleEngine.md): Triggers custom business logic rules over the device data.
 * [__Datastream Getters, Setters and Events__](datastreams/README.md): Abstracts the data sources to ease the access to read and write data from the upper layers.
-* [__Hardware__](hardware.md): Abstracts the hardware specifics.
+* [__Hardware__](hardware/README.md): Abstracts the hardware specifics.
 
 ![ODA layers](../asset/img/layers.png)
