@@ -8,7 +8,7 @@ of the datastream in some way.
 #### Dependencies
 
 * [Operation API](README.md): Provides the api of the operation and the enums of the result code.
-* [State Manager](../stateManager.md): Provides the API of the State Manager that will handle the returned value by the operation.
+* [State Manager](../statemanager/README.md): Provides the API of the State Manager that will handle the returned value by the operation.
 
 #### Trace
 

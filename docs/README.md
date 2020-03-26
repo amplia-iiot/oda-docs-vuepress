@@ -36,11 +36,11 @@ The software provides a common infrastructure to be used from any module:
 ODA follows a multi-tier architecture with the next layers:
 
 * [__Connectors__](layers/connectors/README.md): Send and received data to/from the Internet at a low level of abstraction (byte array).
-* [__Operation Dispatcher__](layers/operationDispatcher.md): Converts low level data into high level representation, usually using a Serializer, to get the operation request and send it to the right operation processor. Once the operation is processed, it converts the response into low level data to send it again through the connector.
-* [__Event Dispatcher__](layers/eventDispatcher/README.md): Converts data events into a low level data representation to send it through the connectors.
-* [__Operations__](layers/operations.md): Implements a specific operation inside the device, like getting data, setting data or make a software update. It contains an interface to implement _custom operations_.
-* [__State Manager__](layers/stateManager.md): Stores the device data state in the current moment. May have historical information. Uses the rule engine if available to trigger custom business rules each time the data is updated.
-* [__Rule Engine__](layers/ruleEngine.md): Triggers custom business logic rules over the device data.
+* [__Operation Dispatcher__](layers/operationdispatcher/README.md): Converts low level data into high level representation, usually using a Serializer, to get the operation request and send it to the right operation processor. Once the operation is processed, it converts the response into low level data to send it again through the connector.
+* [__Event Dispatcher__](layers/eventdispatcher/README.md): Converts data events into a low level data representation to send it through the connectors.
+* [__Operations__](layers/operations/README.md): Implements a specific operation inside the device, like getting data, setting data or make a software update. It contains an interface to implement _custom operations_.
+* [__State Manager__](layers/statemanager/README.md): Stores the device data state in the current moment. May have historical information. Uses the rule engine if available to trigger custom business rules each time the data is updated.
+* [__Rule Engine__](layers/ruleengine/README.md): Triggers custom business logic rules over the device data.
 * [__Datastream Getters, Setters and Events__](layers/datastreams/README.md): Abstracts the data sources to ease the access to read and write data from the upper layers. Data sources may be GPIO, ADC, other devices connected through LAN protocols...
 * [__Hardware__](layers/hardware/README.md): Abstracts the hardware specifics.
 

@@ -15,7 +15,7 @@ This module requires the following modules:
 
 #### Configuration
 
- To configure I2C Hardware module, a file named _es.amplia.oda.hardware.atserver.cfg_ must be created with the next parameters:
+To configure I2C Hardware module, a file named _es.amplia.oda.hardware.atserver.cfg_ must be created with the next parameters:
  * __app-name__: *Required parameter*. Name of the own application that will open the serial port.
  * __ms-get-port__: *Required parameter*. Time in ms to achieve the connection with the serial port. If connection is 
  not achieved in time internal port will be null and a Exception will be thrown.

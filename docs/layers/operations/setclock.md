@@ -7,7 +7,7 @@ from the third system on the operation request itself. This value will be a long
 
 * [Commons](../../infrastructure/core.md): Required to provide the commons utils.
 * [Operation API](README.md): Provides the api of the operation and the enums of the result code.
-* [State Manager](../stateManager.md): Provides the API of the State Manager that will handle the returned value by the operation.
+* [State Manager](../statemanager/README.md): Provides the API of the State Manager that will handle the returned value by the operation.
 
 #### Trace
 

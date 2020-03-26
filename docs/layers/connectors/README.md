@@ -5,7 +5,7 @@ The connectors layer handle data at low level to send it and receive it to/from 
 The action of sending data to the Internet is called __uplink__ and all connectors must be able to implement it.
 
 Some connectors are able to receive operations from third systems (usually OpenGate) and answer with the operation response. This feature is implemented in a message received callback.
-Available operations are defined in [operations section](../operations.md)
+Available operations are defined in [operations section](../operations/README.md)
 
 #### OpenGate Connectors
 The OpenGate connectors modules are responsible for sending the byte stream to Internet through the implemented protocol.

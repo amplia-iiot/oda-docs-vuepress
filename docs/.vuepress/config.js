@@ -83,28 +83,88 @@ module.exports = {
 					},
 					{
 						title: 'Operation Dispatcher',
-						path: '/layers/operationDispatcher.md',
+						path: '/layers/operationdispatcher/README.md',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Event Dispatcher',
-						path: '/layers/eventDispatcher/README.md',
-						sidebarDepth: 2
+						path: '/layers/eventdispatcher/README.md',
+						sidebarDepth: 2,
+                        children: [{
+                            title: 'Event API',
+                               path: '/layers/eventdispatcher/events.md',
+                               sidebarDepth: 3
+                        }]
 					},
 					{
 						title: 'Operations',
-						path: '/layers/operations.md',
-						sidebarDepth: 2
+						path: '/layers/operations/README.md',
+						sidebarDepth: 2,
+                        children: [{
+                            title: 'Local Protocol Discovery',
+                               path: '/layers/operations/discover.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Get Device Parameters',
+                               path: '/layers/operations/getdeviceparameters.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Refresh Information',
+                               path: '/layers/operations/refreshinfo.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Set Clock',
+                               path: '/layers/operations/setclock.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Set Device Parameters',
+                               path: '/layers/operations/setdeviceparameters.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Synchronize Clock',
+                               path: '/layers/operations/synchronizeclock.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Update',
+                               path: '/layers/operations/update.md',
+                               sidebarDepth: 3
+                        }]
 					},
 					{
 						title: 'State Manager',
-						path: '/layers/stateManager.md',
-						sidebarDepth: 2
+						path: '/layers/statemanager/README.md',
+						sidebarDepth: 2,
+                        children: [{
+                            title: 'In Memory',
+                               path: '/layers/statemanager/inmemory.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Real Time',
+                               path: '/layers/statemanager/realtime.md',
+                               sidebarDepth: 3
+                        }]
 					},
 					{
 						title: 'Rule Engine',
-						path: '/layers/ruleEngine.md',
-						sidebarDepth: 2
+						path: '/layers/ruleengine/README.md',
+						sidebarDepth: 2,
+                        children: [{
+                            title: 'Nashorn Implementation',
+                               path: '/layers/ruleengine/nashorn.md',
+                               sidebarDepth: 3
+                        },
+                        {
+                            title: 'Utils.js file',
+                               path: '/layers/ruleengine/utils.md',
+                               sidebarDepth: 3
+                        }]
 					},
 					{
 						title: 'Datastreams',
