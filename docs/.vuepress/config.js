@@ -48,7 +48,7 @@ module.exports = {
 				sidebarDepth: 1,
 				children: [{
 						title: 'Connectors',
-						path: '/layers/connectors/README.md',
+						path: '/layers/connectors/',
 						sidebarDepth: 2,
 						children: [{
 						    title: 'CoAP',
@@ -83,12 +83,12 @@ module.exports = {
 					},
 					{
 						title: 'Operation Dispatcher',
-						path: '/layers/operationdispatcher/README.md',
+						path: '/layers/operationdispatcher/',
 						sidebarDepth: 2
 					},
 					{
 						title: 'Event Dispatcher',
-						path: '/layers/eventdispatcher/README.md',
+						path: '/layers/eventdispatcher/',
 						sidebarDepth: 2,
                         children: [{
                             title: 'Event API',
@@ -98,7 +98,7 @@ module.exports = {
 					},
 					{
 						title: 'Operations',
-						path: '/layers/operations/README.md',
+						path: '/layers/operations/',
 						sidebarDepth: 2,
                         children: [{
                             title: 'Local Protocol Discovery',
@@ -138,7 +138,7 @@ module.exports = {
 					},
 					{
 						title: 'State Manager',
-						path: '/layers/statemanager/README.md',
+						path: '/layers/statemanager/',
 						sidebarDepth: 2,
                         children: [{
                             title: 'In Memory',
@@ -153,7 +153,7 @@ module.exports = {
 					},
 					{
 						title: 'Rule Engine',
-						path: '/layers/ruleengine/README.md',
+						path: '/layers/ruleengine/',
 						sidebarDepth: 2,
                         children: [{
                             title: 'Nashorn Implementation',
@@ -168,7 +168,7 @@ module.exports = {
 					},
 					{
 						title: 'Datastreams',
-						path: '/layers/datastreams/README.md',
+						path: '/layers/datastreams/',
 						sidebarDepth: 2,
 						children: [{
 						    title: 'ADC',
@@ -208,7 +208,7 @@ module.exports = {
 					},
 					{
 						title: 'Hardware',
-						path: '/layers/hardware/README.md',
+						path: '/layers/hardware/',
 						sidebarDepth: 2,
 						children: [{
 						    title: 'AT Server',
