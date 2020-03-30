@@ -186,3 +186,102 @@ datastreams messages through another, disabling datastreams messages by another.
 This module doesn't uses the paho library but requires that the [MQTT Comms](../infrastructure/comms.md) bundle has been added to the ODA.
 In addition to this, requires the [Core Commons](../infrastructure/core.md). That is because the core commons provides the
 same enums that uses the MQTT Comms, some interfaces and proxies of other dependencies that this module have and some utils.
+
+#### Inputs and Outputs
+
+There are several ways to receive the in/output of the devices handled by the ODA. The most frequent services are the ADC
+and DIO, these items are hardware implementation of two different libraries that allow to read and write Analog and Digital
+in/outputs respectively.
+Also exists the I2C protocol that is used to communicate between different parts of the same device (sensors, expansion cards, etc.). 
+
+##### Digital In/Outputs
+
+The Digital Inputs Outputs (DIO) hardware module is an implementation of the [OpenJDK](https://github.com/openjdk/jdk) library.
+
+This Hardware Module allows to read the data from the Digital Inputs and write to digital Outputs. 
+
+This module requires that the device that contains it implements the [Sysfs Interface](https://www.kernel.org/doc/Documentation/gpio/sysfs.txt), 
+which is what this module will use. In case of not been implemented, it can't be used unless we implement an adapter 
+service that will always run since the boot of the device.
+This adapter is implemented [in our repository](https://github.com/amplia-iiot/owa_input_parser) for the OWA450 device.
+
+If the kernel of the device is over 4.4 is probably that the gpio directory and the un/export command doesn't work. In 
+that case the directory */sys/class/gpio* have to be created with two files in it, the export file that will create the 
+digital pin controller if the command `echo X > export` is run (where X is the number of the pin) and the unexport file
+that will remove the digital pin controller if the command `echo X > unexport` is run (where X is the number of the pin).
+
+It is important configure the pin with the desired properties for the target pin. To do this, we have a module configuration
+where, unlike the most of modules, specifies multiple configurations in one file. For each line of the configuration file,
+we are specifying the configuration of one pin that we want the ODA to handle. This configuration is individual to each
+pin and will have the next format:
+```
+numberOfTheConfiguredPin=property1:value1,property2:value2,...
+numberOfAnotherConfigurePin=property1:anotherValue1,property2:anotherValue2,...
+```
+
+For more details to use this module, go to its [documentation page](../layers/hardware/jdkdio.md)
+
+##### Analog In/Outputs
+
+The Analog to Digital Converter (ADC) hardware module is an implementation of the [DIOZero](https://github.com/mattjlewis/diozero) library.
+
+This Hardware Module allows to read the data from Analog Inputs (only for input data).
+
+This module requires that the device firmware handle the input analog data and to keep it in a specific file. If the firmware
+doesn't keep the data to any file, an adapter has to be created. The adapter, that should be running constantly since boot, 
+has to get the data from the device and keep it in a file.
+The OWA450 needs an adapter already implemented [in our repository](https://github.com/amplia-iiot/owa_input_parser).
+
+Once we have the file with the data stored in it, the module can read the data from the file configuring it. This module's 
+configuration, unlike the most of modules, specifies multiple configurations in one file. For each line of the configuration file,
+we are specifying the configuration of one channel that we want the ODA to handle. This configuration is individual to each
+channel and will have the next format:
+```
+numberOfTheConfiguredChannel=property1:value1,property2:value2,...
+numberOfAnotherConfigureChannel=property1:anotherValue1,property2:anotherValue2,...
+```
+
+For more details to use this module, go to its [documentation page](../layers/hardware/diozero.md)
+
+##### I2C Protocol
+
+The I2C module is an implementation of the [DIOZero](https://github.com/mattjlewis/diozero) library.
+
+This Hardware Module allows to read data from the circuits, sensors, expansion cards, etc. connected to the device that
+handle the ODA.
+
+The configuration of this module, like the rest of I/O Controllers modules, specifies multiple configurations in one file. 
+For each line of the configuration file, we are specifying the configuration of one device that we want the ODA to handle. 
+This configuration is individual to each device and will have the next format:
+```
+nameOfTheConfiguredChannel=property1:value1,property2:value2,...
+nameOfAnotherConfigureChannel=property1:anotherValue1,property2:anotherValue2,...
+```
+
+For more details to use this module, go to its [documentation page](../layers/hardware/i2c.md)
+
+#### Operations
+
+All the operations implements an common API that have to be included in the ODA to run the operations. Each operation module
+implements the functionality of an operation. The demos have included all operations available on ODA and this is recommended,
+but in some cases maybe some operation wont be expected and it's not necessary to include it to ODA.
+
+This operations work as follows:
+1. The third system send a operation message, serialized in JSON format, to whatever ODA's connector.
+2. ODA's connector pass the message to the dispatcher
+3. The dispatcher deserialize the message.
+4. The dispatcher get the operation code and search for implementation of that in its current catalogue.
+5. The dispatcher run the implementation's process method.
+6. The implementation of the operation processes the arrived information from the connector.
+7. The operation returns a Result message that will be returned serialized to the connector.
+8. Connector send the response message (AKA payload).
+
+If you need to do tests with the operations is highly recommended to use the MQTT connector and the [Mosquitto application](https://mosquitto.org/).
+This application mock a MQTT broker and allow to send messages / put listeners on that broker, so we can to enter manually
+the operations messages that the ODA expects to do the operation.
+
+This messages can be found in the Trace section of each documentation page of the [Operations](../layers/operations/README.md)
+
+##### Custom Operation
+
+To create your own operation, you have to implement the [Custom Operation Interface](../layers/operations/README.md#Custom Operations)
