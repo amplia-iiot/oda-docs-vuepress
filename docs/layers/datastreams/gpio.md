@@ -1,6 +1,6 @@
 ### GPIO
 
-This Datastream module enable to register the datastreams of [JDK DIO Hardware module]().
+This Datastream module enable to register the datastreams of [JDK DIO Hardware module](../hardware/jdkdio.md).
 
 This datastreams corresponds to the Digital Input Pins of the device. This implementation requires the use of the sysfs 
 interface. This means that this module is not supported by kernels older than the version 4.4.
@@ -10,7 +10,7 @@ interface. This means that this module is not supported by kernels older than th
 #### Dependencies
 
 This module requires the following modules:
-* __[JDK DIO]()__: Provide an implementation of GPIO Service that the datastream module need to provide information of each datastream.
+* __[JDK DIO](../hardware/jdkdio.md)__: Provide an implementation of GPIO Service that the datastream module need to provide information of each datastream.
 * __Event Publisher__: Used to handle the incoming events and send it.
 
 #### Configuration

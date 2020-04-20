@@ -20,7 +20,7 @@ current state. The rules have not established order, so it's impossible create t
 #### Dependencies
 
 * [Core Commmons](../../infrastructure/core.md): Provide the basic API of the configurable bundle.
-* [Event API](): Provide the API of the internal events that use ODA to handle it.
+* [Event API](../eventdispatcher/events.md): Provide the API of the internal events that use ODA to handle it.
 * [State Manager API](../statemanager/README.md): Provide an interface of a generic State Manager that the Engine can use to handle the rules.
 * [Rule Manager API](README.md): Provide the API of the Rule Engines that this module will implement.
 

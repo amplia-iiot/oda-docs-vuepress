@@ -1,6 +1,6 @@
 ### MODBUS
 
-This Datastream module enable to register the datastreams of [Modbus Hardware module]().
+This Datastream module enable to register the datastreams of [Modbus Hardware module](../hardware/modbus.md).
 
 This datastreams corresponds to the inputs/outputs obtained through modbus protocol.
 
@@ -9,7 +9,7 @@ This datastreams corresponds to the inputs/outputs obtained through modbus proto
 #### Dependencies
 
 This module requires the following modules:
-* __[ModBus Hardware]()__: Provide an implementation of ModBus Master that the datastream module need to connect to the 
+* __[ModBus Hardware](../hardware/modbus.md)__: Provide an implementation of ModBus Master that the datastream module need to connect to the 
 bus and collect the information of each datastream.
 
 #### Configuration

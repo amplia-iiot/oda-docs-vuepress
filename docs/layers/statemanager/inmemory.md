@@ -22,10 +22,10 @@ without any affect over the state of the state manager.
 
 #### Dependencies
 
-* __[Core Commons]()__: Provides the API of the configurable Bundles, Datastreams handling API's and Device API's.
-* __[State Manager API]()__: Provides the API that this module will implements.
-* __[Rule Engine API]()__: Provides a generic Rule Engine to contain the ODA rule engine and use it.
-* __[Event API]()__: Provides the event interface to handle the internal events of ODA.
+* __[Core Commons](../../infrastructure/core.md)__: Provides the API of the configurable Bundles, Datastreams handling API's and Device API's.
+* __[State Manager API](../statemanager/README.md)__: Provides the API that this module will implements.
+* __[Rule Engine API](../ruleengine/README.md)__: Provides a generic Rule Engine to contain the ODA rule engine and use it.
+* __[Event API](../eventdispatcher/events.md)__: Provides the event interface to handle the internal events of ODA.
 
 #### Configuration
 

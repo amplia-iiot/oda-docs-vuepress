@@ -23,7 +23,7 @@ expectedTopic/deviceId/datastreamId
 This module requires the following modules:
 * __[MQTT Comms](../../infrastructure/comms.md#MQTT)__: Provide an implementation of MQTT Client Factory that the datastream 
 module need to connect to the MQTT broker to provide information of each datastream and allow the operations.
-* __[CBOR Serializer]()__: Needed to transform the incoming messages to be readables by the modules and to serialize the outgoing payloads.
+* __[CBOR Serializer](../../infrastructure/services.md#Serialization)__: Needed to transform the incoming messages to be readables by the modules and to serialize the outgoing payloads.
 * __Event Publisher__: Used to handle the incoming events and send it.
 
 #### Configuration

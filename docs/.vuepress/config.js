@@ -247,7 +247,17 @@ module.exports = {
 				title: 'Guides',
 				path: '/guides/',
 				sidebarDepth: 1,
-				children:[]
+				children:[
+				    {
+                        title: 'Guides',
+                        path: '/guides/README.md',
+                        sidebarDepth: 2
+                    },
+                    {
+                        title: 'Dependencies Table',
+                        path: '/guides/dependencyTable.md',
+                        sidebarDepth: 2
+                    }]
 			}
 		]
 	}

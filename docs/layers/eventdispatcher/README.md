@@ -7,17 +7,9 @@ The interface defining the service is the [EventDispatcher](https://github.com/a
 public interface EventDispatcher {
     void publish(Event event);
 }
-``` 
-The [Event](https://github.com/amplia-iiot/oda/blob/master/oda-events/api/src/main/java/es/amplia/oda/event/api/Event.java) is defined as:
-```java
-public class Event {
-    private String datastreamId;
-    private String deviceId;
-    private String[] path;
-    private Long at;
-    private Object value;
-}
 ```
+
+Events objects are explained in the [Events page](events.md).
 
 #### OpenGate Event Dispatcher
 

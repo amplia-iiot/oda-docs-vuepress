@@ -7,6 +7,7 @@ Only allows to send data to the OpenGate platform. Operations can't be received.
 #### Dependencies
 
 This module requires the following modules:
+* __[Core Commons](../../infrastructure/core.md)__: Provides many interfaces that this module will use.
 * __[Device Info Provider](../datastreams/deviceinfo.md)__: Needed to know the Device Id of the device that are running the Agent and the API Key to access to OpenGate. 
 Both data are required to achieve a connection with OpenGate and transferred data will have the deviceId in its metadata.
 
@@ -38,3 +39,7 @@ host=localhost
 generalPath=commonPathToAllSites
 collectionPath=/odaData
 ```
+
+#### Source Code
+
+You can check the source code [here](https://github.com/amplia-iiot/oda/tree/master/oda-connectors/http)

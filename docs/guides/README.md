@@ -2,6 +2,16 @@
 
 This section will include guides to execute common tasks in ODA development.
 
+### Dependencies
+
+Some bundles need others to work correctly, because those bundles implements a common api and implements some functions 
+that the first bundles need to use in its operation.
+
+It is important to handle the dependencies, including those bundles that need the modules we will use.
+
+If you need to know what dependencies have a module that you want to use, you can go to its respective documentation page
+or use [this table](dependencyTable.md).
+
 ### Demos
 
 The demos are examples of a deploy of ODA.
@@ -285,3 +295,26 @@ This messages can be found in the Trace section of each documentation page of th
 ##### Custom Operation
 
 To create your own operation, you have to implement the [Custom Operation Interface](../layers/operations/README.md#Custom Operations)
+It's important that the third system can send the operation request that ODA expects and the specific format.
+
+#### State Manager
+
+There are currently two implementations of the dispatcher module.
+- Real Time Dispatcher: Dispatcher that doesn't store any data in itself. All the incoming data will be sent directly.
+- In Memory Dispatcher: Dispatcher that stores the incoming information to cna send it by request or handle derived information.
+
+To use the dispatchers, is necessary to include in the demo the dispatcher API, that contains the commons dispatcher functions.
+
+##### Real Time State Manager
+
+To deploy this dispatcher is important to use the Dispatcher API. 
+
+Nothing else is needed.
+
+#### In Memory State Manager
+
+To deploy this dispatcher you have to deploy the Dispatcher API, the Rule Engine API and the specific implementation of
+the rule engine that you will use.
+
+This is because the historic data will be used by the rulke engine bundle and is needed to include it to be used, having
+both of these bundles a mutual dependency.

@@ -7,10 +7,11 @@ Allows to send data to the OpenGate platform and receive operations from it.
 #### Dependencies
 
 This module requires the following modules:
-* [__Mqtt Communications Module__](../../infrastructure/comms.md#mqtt): Needed to create the MQTT client that will connects 
+* __[Core commons](../../infrastructure/core.md)__: Provides many interfaces that this module will use
+* __[Mqtt Communications Module](../../infrastructure/comms.md#mqtt)__: Needed to create the MQTT client that will connects 
 to the MQTT broker of the third system.
-* __Dispatcher__: Needed to process the payloads and de/serialize its content.
-* __[Device Info Provider](../datastreams/deviceinfo.md)__: Needed to know the Device Id of the device that are running the Agent and the API Key to access 
+* __[Dispatcher](../operationdispatcher/README.md)__: Needed to process the payloads and de/serialize its content.
+* __[Device Info Provider](../datastreams/deviceinfo.md)__: Needed to know the Device Id of the device that are running the Agent, and the API Key to access 
 to OpenGate. 
 Both data are required to achieve a connection with OpenGate and transferred data will have the deviceId in its metadata.
 
@@ -22,7 +23,7 @@ To configure MQTT connector, a file named _es.amplia.oda.connector.mqtt.cfg_ mus
 * __port__: *1883 by default*. Port though the connector have to connect to the host.
 * __securePort__: *8883 by default*. Alternative port to connect securely.
 * __secure__: *false by default*. True to connect to the secure port, false to connect to common port.
-* __mqttVersion__: *MQTT_3_1_1 by default*. Available options are MQTT_3_1, MQTT_3_1_1. MQTT version that connector have to use.
+* __mqttVersion__: *MQTT_3_1_1 by default*. Available options are MQTT_3_1, MQTT_3_1_1. MQTT version that connector has to use.
 * __keepAliveInterval__: *60 by default*. Interval defined by MQTT client to communicate a keep alive message before to disconnect.
 * __maxInFlight__: *10 by default*. Maximum messages that can be queued to be transmitted simultaneously.
 * __cleanSession__: *true by default*. To specify if the connection is persistent (false) or not (true). If clean session 
@@ -33,7 +34,7 @@ with the broker.
 
 
 * __lwt.topic__: *null if not specified*. Topic where the client will receive all Last Will messages from another clients. 
-Last Will messages are a pre-agreed message between the client and the broker to send to the other clients in case of an 
+Last Will messages are a pre-agreed message between the client, and the broker to send to the other clients in case of an 
 unexpected disconnection.
 * __lwt.payload__: *null if not specified*. LWT Payload is the data that the client will agree with the broker to send to 
 another clients in case of connector's client be disconnected unexpectedly.
@@ -79,3 +80,7 @@ topic.response=odm/response
 topic.iot=odm/iot
 message.qos=1
 ```
+
+#### Source Code
+
+You can check the source code [here](https://github.com/amplia-iiot/oda/tree/master/oda-connectors/mqtt)

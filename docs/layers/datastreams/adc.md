@@ -1,6 +1,6 @@
 ### ADC
 
-This Datastream module enable to register the datastreams of [Diozero Hardware module]().
+This Datastream module enable to register the datastreams of [Diozero Hardware module](../hardware/diozero.md).
 
 This datastreams corresponds to the Analog Input Pins of the device.
 
@@ -9,8 +9,8 @@ This datastreams corresponds to the Analog Input Pins of the device.
 #### Dependencies
 
 This module requires the following modules:
-* __[Dio Zero]()__: Provide an implementation of ADC Service that the datastream module need to provide information of each datastream.
-* __Event Publisher__: Used to handle the incoming events and send it.
+* __[Dio Zero](../hardware/diozero.md)__: Provide an implementation of ADC Service that the datastream module need to provide information of each datastream.
+* __Event Publisher_: Used to handle the incoming events and send it.
 
 #### Configuration
 
@@ -22,7 +22,7 @@ every time that want to know actual value).
 * __event__: *false by default*. Enable the option to use this channel as datastream event (automatically will send the 
 to the Event Handlers when a event is generated).
 * __min__: *0.0 by default*. Specifies the value that datastream will take when the hardware channel value is in the minimum of the range. 
-* __max__: *1.0 by default*. Specifies the value that datastream will take when the hardware channel value is in the maximum of the range
+* __max__: *1.0 by default*. Specifies the value that datastream will take when the hardware channel value is in the maximum of the range.
 
 _es.amplia.oda.datastreams.adc.cfg_ will have a similar format to:
 ```

@@ -33,3 +33,29 @@ To implement a custom operation you should deploy a new OSGi bundle with a regis
 method. Usually, this method should extract the operation params from the params generic map, execute the operation and 
 return a result object with all the necessary information about the operation execution. It also has to define which 
 operation is responsible for through the __getOperationSatisfied__ method. 
+
+It's important to implement the operation knowing that the params (parameters) of the operation will be an array of objects
+with two values:
+- name: name of the parameter
+- value: value of the parameter
+
+The JSON message that the third platform will send to ODA to do a custom operation will be a format like this:
+```JSON
+{
+    "operation": {
+        "request": {
+            "timestamp": "<timestampOfTheSendingOperation>",
+            "deviceId": "<deviceOfTheTarget>",
+            "name": "<nameOfTheOperation>",
+            "parameters": [{
+                "name": "parameter1",
+                "value": "value1"
+            }, {
+                "name": "parameter2",
+                "value": "value2"
+            }],
+            "id": "<idOfTheOperation>"
+        }
+    }
+}
+```

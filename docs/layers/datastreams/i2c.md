@@ -1,6 +1,6 @@
 ### I2C
 
-This Datastream module enable to register the datastreams of [I2C Hardware module]().
+This Datastream module enable to register the datastreams of [I2C Hardware module](../hardware/i2c.md).
 
 This datastreams corresponds to the I2C devices connected to the device.
 
@@ -9,7 +9,7 @@ This datastreams corresponds to the I2C devices connected to the device.
 #### Dependencies
 
 This module requires the following modules:
-* __[I2C Hardware]()__: Provide an implementation of I2C Service that the datastream module need to provide information of each datastream.
+* __[I2C Hardware](../hardware/i2c.md)__: Provide an implementation of I2C Service that the datastream module need to provide information of each datastream.
 
 #### Configuration
 

@@ -7,9 +7,10 @@ Allows to send data to the OpenGate platform and receive operations from it.
 #### Dependencies
 
 This module requires the following modules:
+* __[Core commons](../../infrastructure/core.md)__: Provides many interfaces that this module will use
 * __[Device Info Provider](../datastreams/deviceinfo.md)__: Needed to know the Device Id of the device that are running the Agent and the API Key to access to OpenGate. 
 Both data are required to achieve a connection with OpenGate and transferred data will have the deviceId in its metadata.
-* __Dispatcher__: Needed to process the payloads and de/serialize its content.
+* __[Dispatcher](../operationdispatcher/README.md)__: Needed to process the payloads and de/serialize its content.
 
 #### Configuration
 
@@ -34,3 +35,7 @@ And can run with the following minimal content:
 host=localhost
 generalPath=commonPathToAllSites
 ```
+
+#### Source Code
+
+You can check the source code [here](https://github.com/amplia-iiot/oda/tree/master/oda-connectors/websocket)
